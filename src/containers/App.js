@@ -45,10 +45,10 @@ class App extends Component {
           <div className="wrapper" >
             <MyRoute component={Nav} data={this.props.data.auth} />
             <Switch>
-              <Route  path="/" component={HomePage} />
-              <Route  path="/login" component={LoginPage} />
-              <Route  path="/register" component={RegisterPage} />
-              <Route  path="/client-dashboard" component={ClientDashboardPage} />
+              <Route path="/" component={HomePage} />
+              <Route path="/login" component={LoginPage} />
+              <Route path="/register" component={RegisterPage} />
+              <Route path="/client-dashboard" component={ClientDashboardPage} />
               <Route component={NotFoundPage} />
             </Switch>
           </div>
