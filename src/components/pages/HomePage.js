@@ -23,7 +23,7 @@ class HomePage extends React.Component {
                 Per this test, We are not looking for a quick and dirty solution (e.g. hard code everything on the UI view).
                 We expecting to work with perfectionist developer that maintainability and reusability of the code are the key factors.
             </p>
-            <p>The default username is <code>jixian</code> and the default password is <code>jixian</code>, the task is on the <a href="/client-dashboard">dashboard screen</a>.</p>
+            <p>The default username is <code>jixian</code> and the default password is <code>jixian</code>, the task is on the <a href="./client-dashboard">dashboard screen</a>.</p>
 
           </section>
           <section className="text-section">
