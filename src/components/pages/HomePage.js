@@ -29,6 +29,9 @@ class HomePage extends React.Component {
           <section className="text-section">
             <h3>Requirements</h3>
             <p>The below video demostrait how we want it to be, Actually we already implemented all these feature in our current version, but your task is implementat the same feature as what we have now. Please do not miss any small details.</p>
+            <div style={{marginLeft:"auto",marginRight:"auto",width:'560px'}} >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/A1VPGKbHayo" frameBorder={0} allowFullScreen></iframe>
+            </div>
             <ul>
               <li>
                 <p>Per the product list, you should define a hierarchy of react UI components, that make sure its internally reuseable. </p>
@@ -80,6 +83,10 @@ class HomePage extends React.Component {
             <p>If you are ready to start to figure out this puzzle, please (<a href="https://github.com/hellojixian/developer-rest-task">fork this project</a>) to your own github account.
             Then you can feel free to try all changes there.
             </p>
+            <p>To run the project, you need to install node.js environment on your computer, <br/>
+            go to the root folder of this project, run command <strong>"npm start"</strong>, <br/>
+            then you can access the code in your browser at http://localhost:8000/ <br/>
+            </p>
           </section>
 
           <section className="text-section">
@@ -88,7 +95,7 @@ class HomePage extends React.Component {
             <ol>
                 <li>Commit and push the code to Git repositroy </li>
                 <li>shoot a short video to demostrait how it looks.</li>
-                <li>Publish your code on github web services.</li>
+                <li>Publish your code on any web services.</li>
                 <li>Send us an email about how to access your code and the link of the demo video.</li>
             </ol>
             <p>Usually you will get our feedback in the next 2-3days after you deliver your solution.</p>
