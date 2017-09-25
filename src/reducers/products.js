@@ -2,7 +2,7 @@ import { LOADING_PRODUCTS, SET_PRODUCT_CATEGORIES, SET_PRODUCTS } from './../act
 
 // The initial application state
 const initialState = {
-    loadingProducts: false,
+    isLoading: true,
     categories: [],
     products: [],
 };
@@ -14,7 +14,7 @@ export default function products(state = initialState, action) {
     case LOADING_PRODUCTS:
         return {
             ...state,
-            loadingProducts: action.state
+            isLoading: action.state
         }
     case SET_PRODUCT_CATEGORIES:
         return {
@@ -24,7 +24,8 @@ export default function products(state = initialState, action) {
     case SET_PRODUCTS:
     return {
         ...state,
-        products: action.products
+        products: action.products,
+        isLoading: false,
     }
     default:
       return state;

@@ -18,20 +18,18 @@ export function getProducts() {
 }
 
 function timeout(val, ms) {
-    return new Promise(resolve => setTimeout(resolve(val), ms));
+    return new Promise(resolve => setTimeout(() => {
+        resolve(val)
+    }, ms));
 }
 
 export async function getProductsFromApi(dispatch) {
     const products = await timeout(api.products, 1000)
-    console.log(products)
-    console.log(dispatch)
-    dispatch(setProducts(products))
+    dispatch(setProducts(products, false))
 }
 
 export async function getProductCategoriesFromApi(dispatch) {
-    const categories = await timeout(api.productCategories, 1000)
-    console.log(categories)
-    console.log(dispatch)
+    const categories = await timeout(api.productCategories, 10000)
     dispatch(setProductCategories(categories))
 }
 
@@ -42,10 +40,11 @@ export function loadingProducts(state) {
     }
 }
 
-export function setProducts(products) {
+export function setProducts(products, state) {
     return {
         type: SET_PRODUCTS,
-        products
+        products,
+        state,
     }
 }
 
