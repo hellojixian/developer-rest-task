@@ -75,3 +75,8 @@ div.dashboard-gauges {
 div.world-map {
 
 }
+
+.product-container:hover {
+    background-color: #ADD8E6;
+    border-left: 3px solid $dark-brand-color;
+}
