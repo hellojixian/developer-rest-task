@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import LoadingIndicator from '../common/LoadingIndicator';
 import * as ProductActions from '../../actions/products/ProductActions';
+import ProductCategory from './ProductCategory';
 
 class Products extends React.Component {
     componentDidMount() {
@@ -21,8 +22,14 @@ class Products extends React.Component {
                 <hr/>
                 {isLoading
                 ? (<LoadingIndicator />)
-                : this.props.products.map(product => {
-                        return <h5>{product.name}</h5>
+                : this.props.categories.map((category, idx) => {
+                    const products = this.props.products.filter(prod => {
+                        return prod.category === category
+                    })
+                    return <ProductCategory 
+                            key={idx} 
+                            category={category} 
+                            products={products}/>
                 })}
             </div>
         )
@@ -32,7 +39,8 @@ class Products extends React.Component {
 const select = (state) => {
     return {
         isLoading: state.products.isLoading,
-        products: state.products.products
+        products: state.products.products,
+        categories: state.products.categories
     }
 }
 
