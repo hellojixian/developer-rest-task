@@ -29,7 +29,7 @@ export async function getProductsFromApi(dispatch) {
 }
 
 export async function getProductCategoriesFromApi(dispatch) {
-    const categories = await timeout(api.productCategories, 10000)
+    const categories = await timeout(api.productCategories, 1000)
     dispatch(setProductCategories(categories))
 }
 
