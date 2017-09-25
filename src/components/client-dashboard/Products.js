@@ -29,10 +29,6 @@ class Products extends React.Component {
     }
 };
 
-// DistributionMap.propTypes = {
-//     countries: PropTypes.shape({})
-// };
-
 const select = (state) => {
     return {
         isLoading: state.products.isLoading,
