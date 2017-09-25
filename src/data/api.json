@@ -1,0 +1,37 @@
+{
+    "products": [
+        {
+            "name": "My Company Product",
+            "category": "General Hospital",
+            "date": "2017-01-18",
+            "summary": "Nostrud adipisicing non commodo qui aute quis elit qui nisi culpa. Quis sit culpa dolor consectetur do ex nisi cupidatat excepteur quis eiusmod. Ullamco Lorem exercitation tempor officia. Id magna nulla duis mollit ut in irure proident nostrud laboris consectetur. Consequat laboris irure et enim.",
+            "description": "Eiusmod pariatur aliqua et dolore enim sint mollit enim pariatur elit aliquip sunt nisi labore. Est aliquip ut ea tempor ad anim sunt fugiat fugiat duis. Labore do incididunt deserunt mollit veniam est est magna commodo labore duis id excepteur."
+        },
+        {
+            "name": "Another Company Product",
+            "category": "General Hospital",
+            "date": "2017-01-19",
+            "summary": "Magna do laboris nisi ad esse consectetur sunt magna aliquip. Officia labore aute fugiat laboris proident cupidatat aliqua enim id. Laboris nulla quis aliqua eiusmod eu culpa irure id mollit mollit qui aliqua. Nulla non ullamco eiusmod sit sunt mollit duis mollit est velit in ad est. Ea id deserunt est deserunt officia anim nostrud occaecat. Eu officia excepteur magna tempor reprehenderit consectetur incididunt. Labore laboris tempor dolore deserunt mollit non incididunt Lorem fugiat.",
+            "description": "Eiusmod pariatur aliqua et dolore enim sint mollit enim pariatur elit aliquip sunt nisi labore. Est aliquip ut ea tempor ad anim sunt fugiat fugiat duis. Labore do incididunt deserunt mollit veniam est est magna commodo labore duis id excepteur."
+        },
+        {
+            "name": "My Company Product",
+            "category": "Chemistry",
+            "date": "2017-03-20",
+            "summary": "Nostrud adipisicing non commodo qui aute quis elit qui nisi culpa. Quis sit culpa dolor consectetur do ex nisi cupidatat excepteur quis eiusmod. Ullamco Lorem exercitation tempor officia. Id magna nulla duis mollit ut in irure proident nostrud laboris consectetur. Consequat laboris irure et enim.",
+            "description": "Eiusmod pariatur aliqua et dolore enim sint mollit enim pariatur elit aliquip sunt nisi labore. Est aliquip ut ea tempor ad anim sunt fugiat fugiat duis. Labore do incididunt deserunt mollit veniam est est magna commodo labore duis id excepteur."
+        },
+        {
+            "name": "My Company Product",
+            "category": "Microbiology",
+            "date": "2017-02-18",
+            "summary": "Nostrud adipisicing non commodo qui aute quis elit qui nisi culpa. Quis sit culpa dolor consectetur do ex nisi cupidatat excepteur quis eiusmod. Ullamco Lorem exercitation tempor officia. Id magna nulla duis mollit ut in irure proident nostrud laboris consectetur. Consequat laboris irure et enim.",
+            "description": "Eiusmod pariatur aliqua et dolore enim sint mollit enim pariatur elit aliquip sunt nisi labore. Est aliquip ut ea tempor ad anim sunt fugiat fugiat duis. Labore do incididunt deserunt mollit veniam est est magna commodo labore duis id excepteur."
+        }
+    ],
+    "productCategories": [
+        "General Hospital",
+        "Chemistry",
+        "Microbiology"
+    ]
+}
