@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux'
+import * as ProductActions from '../../actions/products/ProductActions'
 
 class Products extends React.Component {
     componentDidMount() {
         // Get data and load into redux
+        this.props.getProducts()
     }
 
     render(){
@@ -21,6 +24,12 @@ class Products extends React.Component {
 //     countries: PropTypes.shape({})
 // };
 
-Products = connect()(Products);
+const mapDispatchToProps = (dispatch, props) => {
+    return {
+        ...bindActionCreators(ProductActions, dispatch)
+    }
+} 
+
+Products = connect(null, mapDispatchToProps)(Products);
 
 export default Products;
