@@ -1,8 +1,10 @@
-import { LOADING_PRODUCTS } from './../actions/products/const';
+import { LOADING_PRODUCTS, SET_PRODUCT_CATEGORIES, SET_PRODUCTS } from './../actions/products/const';
 
 // The initial application state
 const initialState = {
     loadingProducts: false,
+    categories: [],
+    products: [],
 };
 
 
@@ -14,6 +16,16 @@ export default function products(state = initialState, action) {
             ...state,
             loadingProducts: action.state
         }
+    case SET_PRODUCT_CATEGORIES:
+        return {
+            ...state,
+            categories: action.categories
+        }
+    case SET_PRODUCTS:
+    return {
+        ...state,
+        products: action.products
+    }
     default:
       return state;
   }
