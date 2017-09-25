@@ -1,6 +1,7 @@
 {
     "products": [
-        {
+        {   
+            "id": 1,
             "name": "My Company Product",
             "category": "General Hospital",
             "date": "2017-01-18",
@@ -8,6 +9,7 @@
             "description": "Eiusmod pariatur aliqua et dolore enim sint mollit enim pariatur elit aliquip sunt nisi labore. Est aliquip ut ea tempor ad anim sunt fugiat fugiat duis. Labore do incididunt deserunt mollit veniam est est magna commodo labore duis id excepteur."
         },
         {
+            "id": 2,            
             "name": "Another Company Product",
             "category": "General Hospital",
             "date": "2017-01-19",
@@ -15,6 +17,7 @@
             "description": "Eiusmod pariatur aliqua et dolore enim sint mollit enim pariatur elit aliquip sunt nisi labore. Est aliquip ut ea tempor ad anim sunt fugiat fugiat duis. Labore do incididunt deserunt mollit veniam est est magna commodo labore duis id excepteur."
         },
         {
+            "id": 3,            
             "name": "My Company Product",
             "category": "Chemistry",
             "date": "2017-03-20",
@@ -22,6 +25,7 @@
             "description": "Eiusmod pariatur aliqua et dolore enim sint mollit enim pariatur elit aliquip sunt nisi labore. Est aliquip ut ea tempor ad anim sunt fugiat fugiat duis. Labore do incididunt deserunt mollit veniam est est magna commodo labore duis id excepteur."
         },
         {
+            "id": 4,            
             "name": "My Company Product",
             "category": "Microbiology",
             "date": "2017-02-18",
