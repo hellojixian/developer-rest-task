@@ -25,7 +25,7 @@
 
 .dashboard-indicator {
     z-index: 100;
-    position: fixed;
+    position: absolute;
     margin:auto;
     height:100px;
     width:200px;
@@ -76,7 +76,28 @@ div.world-map {
 
 }
 
+.product-container {
+    max-width: 900px;
+}
+
 .product-container:hover {
     background-color: #ADD8E6;
     border-left: 3px solid $dark-brand-color;
+}
+
+
+.product-barcode {
+
+}
+
+.product-divider {
+    margin: 0px;
+}
+
+.product-name {
+    color: $brand-color;
+}
+
+.product-date {
+    color: grey;
 }

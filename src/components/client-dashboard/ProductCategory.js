@@ -10,6 +10,7 @@ class ProductCategory extends React.Component {
         return (
             <div>
                 <h3>{this.props.category}</h3>
+                <hr className='product-divider'/>
                 {this.props.products.map((product) => {
                     return <Product key={product.id} product={product}/>
                 })}

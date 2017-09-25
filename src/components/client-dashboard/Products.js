@@ -19,7 +19,7 @@ class Products extends React.Component {
         return (
             <div>
             <h1>Products</h1>
-                <hr/>
+                <hr className='product-divider'/>
                 {isLoading
                 ? (<LoadingIndicator />)
                 : this.props.categories.map((category, idx) => {
