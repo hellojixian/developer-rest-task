@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Product from './Product';
 
 class ProductCategory extends React.Component {
     componentDidMount() {
@@ -10,7 +11,7 @@ class ProductCategory extends React.Component {
             <div>
                 <h3>{this.props.category}</h3>
                 {this.props.products.map((product) => {
-                    return <h6>{product.name}</h6>
+                    return <Product key={product.id} product={product}/>
                 })}
             </div>
         )
