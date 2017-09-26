@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Grid, Row, Col } from 'react-bootstrap';
-import Modal from '../common/Modal'
+import Modal from '../common/Modal';
+import LoadingButton from '../common/LoadingButton';
 
 const dialogStyle = {
     position: 'absolute',
@@ -13,6 +14,16 @@ const dialogStyle = {
     backgroundColor: 'white',
     boxShadow: '0 5px 15px rgba(0,0,0,.5)',
     padding: 20
+}
+
+const whiteButtonStyle = {
+    backgroundColor: 'white',
+    margin: 0
+}
+
+const blueButtonStyle = {
+    backgroundColor: '#6CC0E5',
+    color: 'white'
 }
 
 class Product extends React.Component {
@@ -52,21 +63,34 @@ class Product extends React.Component {
                                     <h6 className='product-date'>Since {this.props.product.date}</h6>
                                 </Col>
                                 <Col xs={1}>
-                                    <button>x</button>
+                                    <button onClick={this.closeModal}>x</button>
                                 </Col>
                             </Row>
                             <Row>
-                                <Col xs={4}>
+                                <Col xs={3}>
                                     <img style={{marginTop: 20}} height="120" width="120" className='product-barcode' src={"http://via.placeholder.com/120x120"} />
                                 </Col>
-                                <Col xs={8}>
+                                <Col xs={9}>
                                     <h4 className='brand-blue'>Summary</h4>
                                     <p>
                                         {this.props.product.summary}
                                     </p>
                                 </Col>
                             </Row>
+                            <h4 className='brand-blue'>Description</h4>
+                            <p>{this.props.product.description}</p>
+                            <hr />  
+                            <Row>
+                                <Col xs={3}>
+                                    <button style={blueButtonStyle} className='btn blue-btn'><span className='glyphicon glyphicon-search'></span>  Discovery</button>
+                                </Col>
+                                <Col xs={6}>
+                                    <button style={whiteButtonStyle} className='btn'><span className='glyphicon glyphicon-edit'></span>  Edit</button>
+                                    <button style={whiteButtonStyle} className='btn'><span className='glyphicon glyphicon-trash'></span>  Delete</button>
+                                </Col>
+                            </Row>
                         </Grid>
+
                     </div>
                 </Modal>
                 <Grid fluid>
