@@ -30,7 +30,7 @@ class DashboardPage extends React.Component {
             <DistributionMap />
         </div>
         <div className="dashboard-frame dashboard-gauges">
-            <Grid>
+            <Grid fluid>
                 <Row className="show-grid">
                     <Col md={8} ><Overview /></Col>
                     <Col md={4} ><Products /></Col>
