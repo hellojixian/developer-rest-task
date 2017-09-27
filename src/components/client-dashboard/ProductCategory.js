@@ -3,12 +3,9 @@ import { connect } from 'react-redux';
 import Product from './Product';
 
 class ProductCategory extends React.Component {
-    componentDidMount() {
-        console.log(this.props)
-    }
     render(){
         return (
-            <div>
+            <div className='product-category'>
                 <h3>{this.props.category}</h3>
                 <hr className='product-divider'/>
                 {this.props.products.map((product) => {

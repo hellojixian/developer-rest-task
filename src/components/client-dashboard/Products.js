@@ -1,21 +1,23 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import LoadingIndicator from '../common/LoadingIndicator';
 import * as ProductActions from '../../actions/products/ProductActions';
 import ProductCategory from './ProductCategory';
+import TweenMax from 'gsap';
+import $ from 'jquery';
+import AnimationWrapper from '../common/AnimationWrapper'
 
 class Products extends React.Component {
     componentDidMount() {
         // Get data and load into redux
         this.props.getProducts()
-        console.log(this.props.isLoading)
     }
 
     render(){
         const isLoading = this.props.isLoading;
-        console.log('isLoading', isLoading)
         return (
             <div>
             <h1>Products</h1>
@@ -26,10 +28,17 @@ class Products extends React.Component {
                     const products = this.props.products.filter(prod => {
                         return prod.category === category
                     })
-                    return <ProductCategory 
+                    return (
+                        <AnimationWrapper
+                            targetElements='.product-category'
                             key={idx} 
-                            category={category} 
-                            products={products}/>
+                        >
+                            <ProductCategory 
+                                category={category} 
+                                products={products}
+                            />
+                        </AnimationWrapper>
+                    )
                 })}
             </div>
         )

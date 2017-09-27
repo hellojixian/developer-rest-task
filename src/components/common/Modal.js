@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Modal } from 'react-overlays';
 import PropTypes from 'prop-types';
+import AnimationWrapper from'./AnimationWrapper';
 
 const modalStyle = {
     position: 'fixed',
@@ -27,7 +28,11 @@ class ModalWrapper extends React.Component {
                 show={this.props.showModal}
                 onHide={this.props.onHide}
             >
-                {this.props.children}
+                <AnimationWrapper
+                    targetElements={this.props.targetElements}
+                >
+                    {this.props.children} 
+                </AnimationWrapper>
             </Modal>
         )
     }

@@ -1,15 +1,18 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { Grid, Row, Col } from 'react-bootstrap';
 import Modal from '../common/Modal';
 import LoadingButton from '../common/LoadingButton';
+import TweenMax from 'gsap';
+import $ from 'jquery';
 
 const dialogStyle = {
     position: 'absolute',
-    width: '50vw',
+    width: '80vw',
     minWidth: '600px',
     top: '10vh',
-    left: '25vw',
+    left: '10vw',
     borderRadius: '5px',
     backgroundColor: 'white',
     boxShadow: '0 5px 15px rgba(0,0,0,.5)',
@@ -34,14 +37,19 @@ class Product extends React.Component {
             modalOpen: false
         }
         this.handleProductClick = this.handleProductClick.bind(this);
+        this.handleCloseModal = this.handleCloseModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
     handleProductClick() {
         this.setState({modalOpen: true});
     }
-
     closeModal() {
         this.setState({modalOpen: false});
+    }
+    
+    handleCloseModal() {
+        const modal = document.getElementsByClassName('modal-content')[0]
+        TweenMax.fromTo(modal, 0.3, {y:0, opacity: 1}, {y:50, opacity: 0, delay:0.2, ease:Power1.easeOut,onComplete: this.closeModal});
     }
 
     render(){
@@ -49,9 +57,10 @@ class Product extends React.Component {
             <div className='product-container' onClick={this.handleProductClick}>
                 <Modal
                     showModal={this.state.modalOpen}
-                    onHide={this.closeModal}
+                    onHide={this.handleCloseModal}
+                    targetElements='.modal-content'
                 >
-                    <div style={dialogStyle} >
+                    <div className='modal-content' style={dialogStyle} >
                         <Grid fluid>
                             <Row>
                                 <Col xs={2}>
@@ -63,7 +72,7 @@ class Product extends React.Component {
                                     <h6 className='product-date'>Since {this.props.product.date}</h6>
                                 </Col>
                                 <Col xs={1}>
-                                    <button onClick={this.closeModal}>x</button>
+                                    <button onClick={this.handleCloseModal}>x</button>
                                 </Col>
                             </Row>
                             <Row>
