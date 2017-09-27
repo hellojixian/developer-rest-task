@@ -8,7 +8,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 
 import DistributionMap from '../../components/client-dashboard/DistributionMap';
 import Overview from '../../components/client-dashboard/Overview';
-import Products from '../../components/client-dashboard/Products';
+import ProductList from '../../components/client-dashboard/ProductList';
 
 class DashboardPage extends React.Component {
   render() {
@@ -33,7 +33,7 @@ class DashboardPage extends React.Component {
             <Grid>
                 <Row className="show-grid">
                     <Col md={8} ><Overview /></Col>
-                    <Col md={4} ><Products /></Col>
+                    <Col md={4} ><ProductList {...this.props.allProducts}/></Col>
                 </Row>
             </Grid>
         </div>
@@ -70,7 +70,8 @@ class DashboardPage extends React.Component {
 // Which props do we want to inject, given the global state?
 function select(state) {
     return {
-        data: state
+        data: state,
+        allProducts: state.products
     };
 }
 
