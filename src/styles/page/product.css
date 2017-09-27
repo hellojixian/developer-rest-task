@@ -1,0 +1,144 @@
+img{
+  max-width: 100%;
+}
+
+
+.cstm_product_list{
+  margin:0;
+  padding: 0;
+  font-family: 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+}
+
+.cstm_product_list li{
+  list-style: none;
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left:3px solid transparent;
+}
+.cstm_product_list li:hover{
+  background: rgba(65,173,221,0.2);
+  border-left:3px solid #41ADDD;
+}
+.cstm_product_list li h3 {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.img_col{
+  float: left;
+  color: black;
+}
+.modal_icon{
+  margin-top: 5px;
+}
+.list_detail_col{
+  margin-left: 7px;
+width: 74%;
+float: left;
+
+}
+.list_detail_col p{
+  margin-bottom: 5px;
+}
+.date_tym{
+  color: #a0a0a0;
+}
+.list_detail_col h3{
+  margin-top: 0;
+}
+.barcode_scanner{
+  float: right;
+  color: #000;
+}
+.logo_img{
+  height: 15px;
+  width: 15px;
+}
+.prod_descript{
+  font-size: 17px;
+  color: #000;
+}
+.modal-backdrop {
+  z-index: -2;
+}
+.left_img{
+  float: left;
+  width: 30%;
+}
+.rt_description{
+    width: 66%;
+    margin-left: 12px;
+    display: inline-block;
+}
+.body_title{
+    font-size: 19px;
+      color: #6CC0E5;
+      font-weight: 600;
+      margin-top: 9px;
+}
+.body_txt{
+  font-size: 14px;
+    color: #000000;
+}
+
+.custom_btns span{
+  padding-left: 5px;
+}
+.list_icon{
+  position: relative;
+}
+.value{
+  position: absolute;
+  right: -15px;
+  top: -7px;
+  border-radius: 100%;
+  height: 18px;
+  width: 18px;
+  line-height: 18px;
+  border: 1px solid #000;
+  font-size: 12px;
+  text-align: center;
+  color: #000;
+}
+.barcode_scanner .fa-angle-right{
+  float: right;
+    text-align: right;
+    margin-left: 25px;
+    color: #000;
+  font-weight: 600;
+}
+.prodlist_inner{
+  width:90%;
+  margin-left: 30px;
+}
+a:focus{
+  outline: 0
+}
+/*==========MEDIA QUERY===============*/
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+.dashboard-frame{  min-width:100%;}
+.prodlist_inner{
+  width: 100%;
+  margin-left: 0;
+}
+}
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+.dashboard-frame{  min-width:100%;}
+.prodlist_inner{
+  width: 100%;
+  margin-left: 0;
+}
+.list_detail_col h4{
+  margin-top: 0;
+}
+}
+@media only screen and (max-width: 1190px) and (min-width: 992px) {
+  .prodlist_inner{
+    width:100%;
+    margin-left: 0;
+  }
+}
