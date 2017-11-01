@@ -12,10 +12,13 @@ import { combineReducers } from 'redux';
 import auth from '../reducers/auth.js';
 import account from '../reducers/account.js';
 import projects from '../reducers/projects.js';
+import project_list from '../reducers/product_reducer.js';
+
 const reducers = {
     auth,
     account,
-    projects
+    projects,
+    project_list
 };
 const combined = combineReducers(reducers);
 module.exports = combined;
