@@ -66,7 +66,18 @@
     cx:12px;
 }
 
+.glyphicon {
+    color : black;
+}
 
+.title {
+    color: $dark-brand-color;
+    font-weight: bold;
+}
+
+.loc {
+    color: grey;
+}
 
 div.dashboard-gauges {
     padding-top:20px;

@@ -5,11 +5,12 @@
  *          you edit them, they are not updated again.
  */
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
+import { bindActionCreators, createStore, applyMiddleware } from 'redux';
 import { connect } from 'react-redux';
 import {} from '../actions/';
 import { BrowserRouter as Router, Route, Switch, browserHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
 
 /* import CSS file */
 import '../styles/main.css'
@@ -21,6 +22,8 @@ import ClientDashboardPage from './pages/ClientDashboardPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import NotFoundPage from './pages/NotFoundPage';
+
+
 
 class MyRoute extends Route {
    /**
@@ -45,7 +48,7 @@ class App extends Component {
           <div className="wrapper" >
             <MyRoute component={Nav} data={this.props.data.auth} />
             <Switch>
-              <Route path="/" component={HomePage} />
+              <Route exact path="/" component={HomePage} />
               <Route exact path="/login" component={LoginPage} />
               <Route exact path="/register" component={RegisterPage} />
               <Route exact path="/client-dashboard" component={ClientDashboardPage} />
