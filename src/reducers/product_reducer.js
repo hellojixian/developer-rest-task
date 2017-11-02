@@ -3,7 +3,7 @@ import { CHANGE_FORM,SET_AUTH,SENDING_REQUEST,SET_ERROR_MESSAGE } from './../act
 export default function auth(state = [], action) {
     switch (action.type) {
         case "FETCH_POSTS":
-            return action.payload.data.products;
+            return action.payload.products;
         default:
             return state;
     }

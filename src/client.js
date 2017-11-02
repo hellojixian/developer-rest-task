@@ -7,9 +7,10 @@ import configureStore from './stores';
 import promise from 'redux-promise';
 import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
+import thunk from 'redux-thunk';
 
 const store = configureStore();
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
 ReactDOM.render(
   <AppContainer>
@@ -26,7 +27,7 @@ if (module.hot) {
 
     ReactDOM.render(
       <AppContainer>
-        <Provider store={store}>
+        <Provider store={createStoreWithMiddleware(reducers)}>
           <NextApp />
         </Provider>
       </AppContainer>,

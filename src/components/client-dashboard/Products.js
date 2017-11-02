@@ -7,11 +7,16 @@ import _ from 'lodash';
 import ProductCategory from './Product_category';
 
 class Products extends React.Component {
-    componentDidMount() {
+    componentWillMount() {
         this.props.fetchJSON();
     }
 
     renderList() {
+        if (!this.props.lists) {
+            return (
+                <p>Loading...</p>
+                );
+        }
         return _.map(this.props.lists, item => {
             return (
                 <ProductCategory key={item.category} data={item}>
