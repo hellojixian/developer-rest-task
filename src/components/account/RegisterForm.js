@@ -66,9 +66,9 @@ class LoginForm extends Component {
   }
 
   // Emits a change of the form state to the application state
-  _emitChange(newState) {
-    this.props.dispatch(changeForm(newState));
-  }
+  // _emitChange(newState) {
+  //   this.props.dispatch(changeForm(newState));
+  // }
 
   // onSubmit call the passed onSubmit function
   _onSubmit(evt) {

@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
 import { changeForm } from '../../actions/account/LoginActions';
 import LoadingButton from '../common/LoadingButton';
 import ErrorMessage from '../common/ErrorMessage';
+import {connect} from 'react-redux';
 // Object.assign is not yet fully supported in all browsers, so we fallback to
 // a polyfill
 const assign = Object.assign || require('object.assign');
@@ -78,5 +79,7 @@ LoginForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
   data: PropTypes.object.isRequired
 }
+
+
 
 export default LoginForm;

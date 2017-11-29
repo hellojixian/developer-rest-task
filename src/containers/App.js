@@ -40,15 +40,17 @@ class MyRoute extends Route {
 class App extends Component {
 
   render() {
+    debugger;
     return (
         <Router>
           <div className="wrapper" >
             <MyRoute component={Nav} data={this.props.data.auth} />
             <Switch>
-              <Route path="/" component={HomePage} />
-              <Route exact path="/login" component={LoginPage} />
-              <Route exact path="/register" component={RegisterPage} />
-              <Route exact path="/client-dashboard" component={ClientDashboardPage} />
+              <Route exact path="/" component={HomePage} />
+              <Route path="/login" component={LoginPage} />
+              <Route path="/register" component={RegisterPage} />
+              <Route path="/client-dashboard" component={ClientDashboardPage} />
+              <Route path="/client-dashboard/product-discovery-checklist/aaa" component={ClientDashboardPage} />
               <Route component={NotFoundPage} />
             </Switch>
           </div>

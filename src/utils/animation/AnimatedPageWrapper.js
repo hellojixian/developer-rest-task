@@ -12,8 +12,8 @@ export default function animatedPageWarpper(Page){
         componentDidMount() {
             const el = ReactDOM.findDOMNode(this);
             TweenMax.fromTo(el, 0.3,
-                {y: 50, opacity: 0},
-                {y: 0, opacity: 1,
+                {y: 0, opacity: 0},
+                {y: 100, opacity: 1,
                 ease:Power1.easeOut,
                 onComplete: null});
         }
