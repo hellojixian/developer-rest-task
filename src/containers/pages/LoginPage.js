@@ -8,6 +8,7 @@ function select(state) {
     data: state.auth
   };
 }
+debugger;
 
 // Wrap the component to inject dispatch and state into it
 export default connect(select)(LoginPageComponenet);

@@ -12,6 +12,7 @@ import AnimatedPageWrapper from '../../utils/animation/AnimatedPageWrapper';
 import RegisterForm from '../account/RegisterForm';
 // import auth from '../../utils/auth';
 // import { login } from '../../actions/AppActions';
+import { login } from '../../actions/account/LoginActions';
 
 class RegisterPage extends React.Component {
   render() {
@@ -37,7 +38,8 @@ class RegisterPage extends React.Component {
   }
 
   _register(username, password) {
-    this.dispatch(login(username, password));
+    // this.dispatch(login(username, password));
+    this.dispatch(login.bind(this)(username, password));
   }
 }
 

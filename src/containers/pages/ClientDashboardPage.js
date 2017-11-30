@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import AnimatedPageWrapper from '../../utils/animation/AnimatedPageWrapper';
 import $ from 'jquery';
 import { Grid, Row, Col } from 'react-bootstrap';
+import {handlingmodal , closingmodal} from '../../actions/client-dashboard/modal';
+import {bindActionCreators} from 'redux';
 
 
 import DistributionMap from '../../components/client-dashboard/DistributionMap';
@@ -32,8 +34,15 @@ class DashboardPage extends React.Component {
         <div className="dashboard-frame dashboard-gauges">
             <Grid>
                 <Row className="show-grid">
-                    <Col md={8} ><Overview /></Col>
-                    <Col md={4} ><Products /></Col>
+                    <Col md={9} ><Overview /></Col>
+                    <Col md={3} ><Products generalhospital={this.props.data.productlist[0]}
+                                            chemistry = {this.props.data.productlist[1]}
+                                            microbiology = {this.props.data.productlist[2]}
+                                            modal = {this.props.data.modal}
+                                            handlingmodal={this.props.handlingmodal}
+                                            closingmodal={this.props.closingmodal}
+                                            toggleLayer={this.toggleLayer.bind(this, 'world-map')}
+                                            /></Col>
                 </Row>
             </Grid>
         </div>
@@ -68,13 +77,21 @@ class DashboardPage extends React.Component {
 }
 
 // Which props do we want to inject, given the global state?
-function select(state) {
+function mapStateToProps(state) {
     return {
-        data: state
+        data: state,
     };
+}
+
+function mapDispatchToProps(dispatch){
+  const actions = {
+    handlingmodal: handlingmodal,
+    closingmodal: closingmodal
+  }
+ return bindActionCreators(actions, dispatch);
 }
 
 DashboardPage = AnimatedPageWrapper(DashboardPage);
 
 // Wrap the component to inject dispatch and state into it
-export default connect(select)(DashboardPage);
+export default connect(mapStateToProps,mapDispatchToProps)(DashboardPage);

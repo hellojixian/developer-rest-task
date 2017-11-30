@@ -16,7 +16,6 @@ import { login } from '../../actions/account/LoginActions';
 
 
 class LoginPage extends Component {
-
   render() {
     const dispatch = this.props.dispatch;
     const { formState, currentlySending } = this.props.data;
@@ -45,5 +44,4 @@ class LoginPage extends Component {
 }
 
 // Apply animation for page
-export default AnimatedPageWrapper(LoginPage);
-
+export default LoginPage;
