@@ -1,40 +1,40 @@
 .dashboard {
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     position: absolute;
 }
 
-.dashboard h1{
+.dashboard h1 {
     color: $dark-brand-color;
 }
 
 .dashboard-frame {
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
     position: absolute;
     min-width: calc(1200px - 16px*2);
     transition: all 0.3s linear;
     z-index: 1;
-    opacity:0.2;
+    opacity: 0.2;
 }
 
 .dashboard-frame-active {
     z-index: 50;
-    opacity:1;
+    opacity: 1;
 }
 
 .dashboard-indicator {
     z-index: 100;
     position: fixed;
-    margin:auto;
-    height:100px;
-    width:200px;
-    top:180px;
-    bottom:0px;
-    left:20px;
+    margin: auto;
+    height: 100px;
+    width: 200px;
+    top: 180px;
+    bottom: 0px;
+    left: 20px;
 }
 
-.dashboard-indicator ul{
+.dashboard-indicator ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -43,35 +43,121 @@
     font-family: $text-font-stack;
 }
 
-.dashboard-indicator svg{
-    width:20px;
-    height:12px;
+.dashboard-indicator svg {
+    width: 20px;
+    height: 12px;
     view-box: 0px 0px 24px 24px;
     fill: transparent;
     stroke: $dark-brand-color;
-    stroke-width:4px;
+    stroke-width: 4px;
 }
 
-.dashboard-indicator .dashboard-selector-hover svg{
+.dashboard-indicator .dashboard-selector-hover svg {
     fill: $very-light-grey;
 }
 
-.dashboard-indicator .dashboard-selector-active svg{
+.dashboard-indicator .dashboard-selector-active svg {
     fill: $brand-color;
 }
 
-.dashboard-indicator svg circle{
-    r:8px;
-    cy:12px;
-    cx:12px;
+.dashboard-indicator svg circle {
+    r: 8px;
+    cy: 12px;
+    cx: 12px;
 }
 
-
-
 div.dashboard-gauges {
-    padding-top:20px;
+    padding-top: 20px;
 }
 
 div.world-map {
+}
+.productname {
+    color: $dark-brand-color;
+}
 
+.description {
+    color: black;
+}
+
+.sincedate {
+    color: grey;
+}
+
+.glyphicon-barcode {
+    font-size: 40px;
+    color: black;
+    padding-top: 10px;
+    width: 65px;
+}
+
+.glyphicon-list {
+    color: grey;
+    font-size: 30px;
+    padding-top: 15px;
+}
+
+.badge-notify {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15px;
+    border: 1px solid black;
+    background: white;
+    position: relative;
+    top: -25px;
+    left: -10px;
+    color: black;
+    border-radius: 90%;
+}
+
+.glyphicon-chevron-right {
+    color: grey;
+    position: relative;
+    top: -10px;
+    left: 5px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-top: 1px solid #ddd;
+    border-radius: 0;
+    color: #fff;
+    width: 400px;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background: #d3d3d3;
+}
+
+.barcode {
+    width: 20%;
+}
+
+.productlist {
+    width: 200px;
+}
+.btn.btn-primary {
+    color: white;
+}
+
+.modalData-descriptionshort {
+    font-size: 90%;
+}
+.modalData-sincedate {
+    font-size: 85%;
+    color: grey;
+}
+.modal-image {
+    border: 1px solid grey;
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    position: relative;
+    left: -10px;
+    top: 10px;
+}
+
+.discoverybutton {
+    width: 135px;
 }
